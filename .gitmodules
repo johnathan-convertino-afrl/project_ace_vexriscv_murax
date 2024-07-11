@@ -1,0 +1,24 @@
+[submodule "sw/riscv-gnu-toolchain"]
+	path = sw/riscv-gnu-toolchain
+	url = https://github.com/riscv-collab/riscv-gnu-toolchain.git
+[submodule "sw/openocd_riscv"]
+	path = sw/openocd_riscv
+	url = https://github.com/SpinalHDL/openocd_riscv.git
+[submodule "hdl/util_pub"]
+	path = hdl/util_pub
+	url = https://github.com/johnathan-convertino-afrl/UTIL.git
+[submodule "hdl/sim_pub"]
+	path = hdl/sim_pub
+	url = https://github.com/johnathan-convertino-afrl/SIM.git
+[submodule "hdl/ip_pub/up_apb3"]
+	path = hdl/ip_pub/up_apb3
+	url = https://github.com/johnathan-convertino-afrl/up_apb3.git
+[submodule "hdl/ip_git/fusesoc-cores"]
+	path = hdl/ip_git/fusesoc-cores
+	url = https://github.com/fusesoc/fusesoc-cores.git
+[submodule "hdl/ip_git/VexRiscv_fusesoc"]
+	path = hdl/ip_git/VexRiscv_fusesoc
+	url = https://github.com/johnathan-convertino-afrl/VexRiscv_fusesoc.git
+[submodule "hdl/ace_vexriscv_murax"]
+	path = hdl/ace_vexriscv_murax
+	url = https://github.com/johnathan-convertino-afrl/ace_vexriscv_murax.git
