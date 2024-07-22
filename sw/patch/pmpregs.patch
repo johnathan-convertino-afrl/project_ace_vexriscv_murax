@@ -1,0 +1,50 @@
+diff --git a/src/target/vexriscv-csrs.h b/src/target/vexriscv-csrs.h
+index 53ad646ae..45d98ea73 100644
+--- a/src/target/vexriscv-csrs.h
++++ b/src/target/vexriscv-csrs.h
+@@ -704,9 +704,6 @@ const struct vexriscv_core_reg_init vexriscv_init_reg_list[] = {
+     .description = "Machine interrupt pending",
+     .versions = "1.7-",
+ },
+-
+-
+-/*
+ {
+     .name = "pmpcfg0",
+     .csr_num = 0x3A0,
+@@ -717,7 +714,7 @@ const struct vexriscv_core_reg_init vexriscv_init_reg_list[] = {
+ },
+ {
+     .name = "pmpcfg1",
+-    .csr_num = 0x3A0,
++    .csr_num = 0x3A1,
+     .inHaltOnly = FALSE,
+     .is_csr = TRUE,
+     .description = "Physical memory protection configuration (RV32 only)",
+@@ -725,7 +722,7 @@ const struct vexriscv_core_reg_init vexriscv_init_reg_list[] = {
+ },
+ {
+     .name = "pmpcfg2",
+-    .csr_num = 0x3A0,
++    .csr_num = 0x3A2,
+     .inHaltOnly = FALSE,
+     .is_csr = TRUE,
+     .description = "Physical memory protection configuration",
+@@ -733,7 +730,7 @@ const struct vexriscv_core_reg_init vexriscv_init_reg_list[] = {
+ },
+ {
+     .name = "pmpcfg3",
+-    .csr_num = 0x3A0,
++    .csr_num = 0x3A3,
+     .inHaltOnly = FALSE,
+     .is_csr = TRUE,
+     .description = "Physical memory protection configuration (RV32 only)",
+@@ -867,7 +864,7 @@ const struct vexriscv_core_reg_init vexriscv_init_reg_list[] = {
+     .description = "Physical memory protection address register",
+     .versions = "1.10-",
+ },
+-*/
++
+ 
+ /*
+ {

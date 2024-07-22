@@ -1,6 +1,6 @@
 //#include "stddefs.h"
 #include <stdint.h>
-
+#include <stdio.h>
 #include "murax.h"
 
 void print(const char*str)
@@ -28,7 +28,7 @@ void main() {
     char data = 32;
 
     println("WELCOME TO THE RISCV HELLO WORLD UART PROGRAM!!");
-
+    
     GPIO_A->OUTPUT_ENABLE = 0x0000FFFF;
     GPIO_A->OUTPUT = 0x0000FFFF;
 

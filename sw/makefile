@@ -11,6 +11,7 @@ hello_world: $(RISV32_BIN)
 	$(MAKE) RISCV_PATH=$(SRCDIR)/$(BINDIR)/riscv -C murax/hello_world/
 
 $(OPENOCD_BIN):
+	bash -c "cd openocd_riscv && git apply --ignore-whitespace ../patch/pmpregs.patch || true"
 	bash -c "cd openocd_riscv && ./bootstrap"
 	bash -c "cd openocd_riscv && ./configure --prefix=$(SRCDIR)/$(BINDIR)/openocd --enable-ftdi --enable-dummy --enable-jtag_vpi"
 	$(MAKE) -C openocd_riscv
