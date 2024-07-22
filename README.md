@@ -21,7 +21,7 @@ source code and tools. It also has its own make file to launch builds.
 
 Results:
 
-* Vexriscv Murax CPU with RAM, UART, and GPIO built in. Targeting the Nexys A7-100T FPGA board.
+* Vexriscv Murax CPU with RAM, UART, PMP, and GPIO built in. Targeting the Nexys A7-100T FPGA board.
   * future lattice target, added and ready but NOT part of make build system.
   * future sim target, added and ready but NOT part of make build system.
 * openocd tool for Vexriscv CPU
