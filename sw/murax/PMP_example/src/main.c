@@ -24,12 +24,18 @@ void delay(uint32_t loops)
 }
 
 
+void foo(){
+    println("You got hacked :)");
+}
+
 void main() {
     char data = 32;
-    //write into the csr reg
+    char buffer[10];
     println("WELCOME TO THE RISCV HELLO WORLD UART PROGRAM!!");
+    
     GPIO_A->OUTPUT_ENABLE = 0x0000FFFF;
     GPIO_A->OUTPUT = 0x0000FFFF;
+
     delay(90000000);
 
     for(;;)
@@ -49,8 +55,7 @@ void main() {
       delay(200000);
     }
 }
-//address of foo 80000300
-//address of main 80000314
+
 void irqCallback()
 {
 }

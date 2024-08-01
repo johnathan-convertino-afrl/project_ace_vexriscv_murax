@@ -5,10 +5,13 @@ RISV32_BIN	= $(SRCDIR)/$(BINDIR)/riscv/bin/riscv32-unknown-elf-gcc
 
 .PHONY: clean
 
-all: $(OPENOCD_BIN) hello_world
+all: $(OPENOCD_BIN) hello_world PMP_example
 
 hello_world: $(RISV32_BIN)
 	$(MAKE) RISCV_PATH=$(SRCDIR)/$(BINDIR)/riscv -C murax/hello_world/
+
+PMP_example: $(RISV32_BIN)
+	$(MAKE) RISCV_PATH=$(SRCDIR)/$(BINDIR)/riscv -C murax/PMP_example/
 
 $(OPENOCD_BIN):
 	bash -c "cd openocd_riscv && git apply --ignore-whitespace ../patch/pmpregs.patch || true"
@@ -23,6 +26,7 @@ $(RISV32_BIN):
 
 clean:
 	$(MAKE) $@ -C murax/hello_world/
+	$(MAKE) $@ -C murax/PMP_example/
 	$(MAKE) $@ -C openocd_riscv/
 	$(MAKE) $@ -C riscv-gnu-toolchain/
 	rm -rf $(BINDIR)
